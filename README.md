@@ -7,14 +7,9 @@
 
 # 使用方法 
 ```
-var keyword_reg_list = [  // 要增加匹配,就在这里写正则即可.
-    /\\\s+n/g,  // \n中间多个空格
-    /[\uFF00-\uFFFF]/g,  // 全角符号
-    /\s%|%\s/g,  // %两遍有空格
-    /\s\$|\$\s/g,  // $两遍有空格
-    /[^\\]'/g,  // 单引号前面没有反斜杠
-    /\#[0-9\s]*\s[0-9\s]*;/g,  // &#123;这样的字符串. &死活匹配不上,有问题. 只匹配了#123;这些字符串前面有空格的情况.
+var keyword_reg_list = [
+    /\\\s+n/g,
 ];
 
-$("#xml_content").textSearch(keyword_reg_list, {markColor: "magenta"});
+$("选择器").textSearch(keyword_reg_list, {markColor: "magenta"});
 ```
